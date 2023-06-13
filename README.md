@@ -8,7 +8,7 @@ Actual software build used on the Arduino Nano to:
 * Transmit distance data over UDP to remote computer
 
 ## client_udp.py
-Simple UDP client using Python to receive the Arduino's range data. Helpful for troubleshooting when not connected over serial connection
+Simple UDP client using Python to receive the Arduino's range data. Helpful for troubleshooting when not connected over a serial connection
 
 ## ultrasonic_led.ino
 A stripped down proof-of-concept that strictly runs on the Arduino (no networking or transmission of data)
