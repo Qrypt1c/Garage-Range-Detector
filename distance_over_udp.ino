@@ -42,9 +42,10 @@ void setup() {
   pinMode(red, OUTPUT);
   pinMode(green, OUTPUT);
   Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
+  //while (!Serial) {
+  //  ; // wait for serial port to connect. Needed for native USB port only
+  //}
+  
 
   // check for the WiFi module:
   if (WiFi.status() == WL_NO_MODULE) {
@@ -66,7 +67,7 @@ void setup() {
     status = WiFi.begin(ssid, pass);
 
     // wait 10 seconds for connection:
-    delay(10000);
+    delay(5000);
   }
   Serial.println("Connected to WiFi");
   printWifiStatus();
@@ -84,7 +85,7 @@ void loop() {
 
   int distance_cm = ((duration * 0.034) / 2);
 
-  if (distance_cm < 10){
+  if (distance_cm < 103 && distance_cm > 90){
     colorfn(green);
   }
 
